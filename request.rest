@@ -1,0 +1,26 @@
+GET http://localhost:3000/
+
+###
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "destination": "me@me.com"
+}
+
+###
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "destination": "test@test.com"
+}
+
+###
+GET http://localhost:3000/auth/login/callback?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXN0aW5hdGlvbiI6Im1lQG1lLmNvbSIsImNvZGUiOiI4NjYxOCIsImlhdCI6MTY5NDU1NzAwMywiZXhwIjoxNjk0NTU3MzAzfQ.CoTnAAxwQiu-HqOdDfnihonLSVx4h7eeDEgNpc5MDB8
+
+
+###
+GET http://localhost:3000/protected
+Authorization: Bearer 
